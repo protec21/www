@@ -1,0 +1,74 @@
+{% load static %}
+<html lang="ko">
+{% include "www/share/head.html" %}
+<body>
+<div class="container" style="background-image: url('{% static 'www\main02.png' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+
+
+
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef;">
+    <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
+        <div>
+            <ul>
+                <p class="sidenavtitle">회사소개</p>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../company">　- 회사개요</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../vision">　- 기업비전</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../history">　- 회사연혁</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../orgnation">　- 조직도</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../certificate">　- 지적재산권</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../map">　- 오시는길</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../product">제품소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../#" onclick="javascript:alert('준비중입니다.')">고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../stocknotice">투자정보</a>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 회사소개 > 기업비전</div>
+        <div class="col-xs" style="font-size: 25px">기업비전</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
+<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px";>
+세계속에 당당한 프로텍
+프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
+</pre>
+        </div>
+        <div style="text-align: center; width: 800px">
+            <p><br><br>"고객과 투자자의 이익을 극대화하는 고객중심의 경영추구"</p>
+        </div>
+        <div style="text-align: center; width: 800px; height: 600px">
+            <img src="{% static 'www\vision.png' %}">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    {% include "www/share/footer.html" %}
+
+
+
+</div>
+<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+</body>
+</html>

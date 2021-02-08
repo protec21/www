@@ -1,0 +1,112 @@
+{% load static %}
+<html lang="ko">
+{% include "www/share/head.html" %}
+<body>
+    <div class="container" style="width: 1400px; background-image: url('{% static 'www/main01.png' %}')">
+        <div class="col-xs" style="position: absolute;">
+            <div class="col-xs" style="position: relative; left: -15px; top: 0px; z-index: 0"><img src="{% static 'www/mainback01.png' %}" width="300"></img></div>
+        </div>
+        <div class="col-xs" style="position: absolute;">
+            <div style="position: relative; left: 970px; top: 0px; z-index: 1"><img src="{% static 'www/mainback02.png' %}" width="415"></img></div>
+        </div>
+        <div style="position: absolute;">
+            <div style="position: relative; left: 1070px; top: 420px; z-index: 1">
+                <p style="color: whitesmoke; font-size: 15px; line-height: 8px"><em>We Have Made Professional Technology</em></p>
+                <p style="color: whitesmoke; font-size: 36px; line-height: 8px">Professionalist</p>
+            </div>
+        </div>
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:387px">
+    </div>
+    <div class="row trans text-white align-items-center" style="height: 40px">
+        <div class="col-xs" style="width: 50px;"></div>
+        <div class="col-xs">
+            <strong>STOCK QUOTE</strong>
+        </div>
+        <div class="col-xs" style="width: 200px;"></div>
+        <div class="col-xs">
+            CURRENT PRICE :
+        </div>
+        <div class="col-xs">-</div>
+        <div class="col-xs" style="width: 100px;"></div>
+        <div class="col-xs">
+            KOSPI :
+        </div>
+        <div class="col-xs">-</div>
+        <div class="col-xs" style="width: 100px;"></div>
+        <div class="col-xs">
+            KOSDAQ :
+        </div>
+        <div class="col-xs">-</div>
+    </div>
+
+
+
+
+
+
+    <div class="row" style="background-color: #efefef">
+        <div style="width: 50px;"></div>
+        <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray" ;>
+<h5><strong>프로텍본사</strong></h5>
+<pre style="color: dimgray">
+Dispensing M/C, Die-Bonder M/C
+Semicon, LED Manufacturing M/C
+
+전화 : 031-470-0700
+팩스 : 031-470-0701
+주소 : 경기도 안양시 동안구 시민대로
+　　　327번길 11-14(관양동)
+</pre>
+        </div>
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
+                style="max-height: 150px; filter: grayscale(100%);" src="{% static 'www\DISPENCER SYSTEM.png' %}"><br>DISPENCER SYSTEM</a>
+        </div>
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
+                style="max-height: 150px; filter: grayscale(100%);"
+                src="{% static 'www\SOLIDER BALL PLACER FOR PCB.png' %}"><br>SOLIDER BALL PLACER FOR PCB</a>
+        </div>
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
+                style="max-height: 150px; filter: grayscale(100%);" src="{% static 'www\LASER REFLOW.png' %}"><br>LASER REFLOW</a>
+        </div>
+    </div>
+
+
+    <div class="row" style="background-color: #efefef; border-top: 1px solid lightgray" ;>
+        <div style="width: 50px;"></div>
+        <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray" ;>
+<h5><strong>피앤엠</strong></h5>
+<pre style="color: dimgray">
+Penumetic
+Cylinder
+
+전화 : 032-822-9183
+팩스 : 032-822-9184
+주소 : 인천광역시 남동구 함박뫼로411
+ 　 　 43블럭12롯트
+</pre>
+        </div>
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="http://protec.caddata.co.kr"><img
+                style="max-height: 150px; filter: grayscale(100%);" src="{% static 'www\GENERAL CYLINDER.png' %}"><br>GENERAL CYLINDER</a>
+        </div>
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="http://protec.caddata.co.kr"><img
+                style="max-height: 150px; filter: grayscale(100%);" src="{% static 'www\GENERAL HAND.png' %}"><br>GENERAL HAND</a>
+        </div>
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="http://protec.caddata.co.kr"><img
+                style="max-height: 150px; filter: grayscale(100%);"
+                src="{% static 'www\PRECISION GUIDE CYLINDER.png' %}"><br>PRECISION GUIDE CYLINDER</a>
+        </div>
+    </div>
+
+
+    {% include "www/share/footer.html" %}
+
+
+</div>
+<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+{% load static %}
+<html lang="ko">
+{% include "www/share/head.html" %}
+<body>
+<div class="container" style="background-image: url('{% static 'www\main02.png' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+
+
+
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef;">
+    <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../company">회사소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../product">제품소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../#" onclick="javascript:alert('준비중입니다.')">고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <p class="sidenavtitle">투자정보</p>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../stocknotice">　- 공지사항</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="#" onclick="javascript:alert('준비중입니다.')">　- 증시정보</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 투자정보 > 공지사항</div>
+        <div class="col-xs" style="font-size: 25px">공지사항</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
+<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px">
+세계속에 당당한 프로텍
+프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
+</pre>
+        </div><br>
+
+
+
+
+<table class="table table-striped m-5" style="width: 95%;">
+    <thead>
+        <tr><th>번호</th><th>제목</th><th>작성일</th></tr>
+    </thead>
+    <tbody>
+        <tr><th>24</th><th><a type="button" data-toggle="modal" data-target="#no24">프로텍 소개 자료</a></th><th>2020.08.28</th></tr>
+        <tr><th>23</th><th><a type="button" data-toggle="modal" data-target="#no23">제23기 주주총회소집공고</a></th><th>2020.03.16</th></tr>
+        <tr><th>22</th><th><a type="button" data-toggle="modal" data-target="#no22">전자증권법 시행에 따른 공고</a></th><th>2019.08.14</th></tr>
+        <tr><th>21</th><th><a type="button" data-toggle="modal" data-target="#no21">무상증자 신주발행 공고</a></th><th>2019.06.20</th></tr>
+        <tr><th>20</th><th><a type="button" data-toggle="modal" data-target="#no20">제22기 결산공고</a></th><th>2019.03.28</th></tr>
+        <tr><th>19</th><th><a type="button" data-toggle="modal" data-target="#no19">제22기 주주총회소집공고</a></th><th>2019.03.13</th></tr>
+        <tr><th>18</th><th><a type="button" data-toggle="modal" data-target="#no18">프로텍 소개 자료</a></th><th>2019.01.28</th></tr>
+        <tr><th>17</th><th><a type="button" data-toggle="modal" data-target="#no17">합병 종료 보고 공고</a></th><th>2018.04.19</th></tr>
+        <tr><th>16</th><th><a type="button" data-toggle="modal" data-target="#no16">제21기 결산공고</a></th><th>2018.03.22</th></tr>
+        <tr><th>15</th><th><a type="button" data-toggle="modal" data-target="#no15">소규모합병에 따른 채권자 이의제출 공고</a></th><th>2018.03.16</th></tr>
+        <tr><th>14</th><th><a type="button" data-toggle="modal" data-target="#no14">소규모 합병 공고</a></th><th>2018.02.28</th></tr>
+        <tr><th>13</th><th><a type="button" data-toggle="modal" data-target="#no13">주주확정 기준일 및 주식명의개서 정지공고</a></th><th>2018.02.12</th></tr>
+        <tr><th>12</th><th><a type="button" data-toggle="modal" data-target="#no12">내부정보관리규정-개정</a></th><th>2017.08.29</th></tr>
+        <tr><th>11</th><th><a type="button" data-toggle="modal" data-target="#no11">제20기 결산공고</a></th><th>2017.03.24</th></tr>
+        <tr><th>10</th><th><a type="button" data-toggle="modal" data-target="#no10">제19기 결산공고</a></th><th>2016.03.25</th></tr>
+    </tbody>
+</table>
+<br><br><br>
+    </div>
+</div>
+
+
+
+
+    {% include "www/share/footer.html" %}
+
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="no24" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">프로텍 소개 자료</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/프로텍(053610).pdf' %}">프로텍(053610).pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="no23" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">제23기 주주총회소집공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+주주총회 소집공고
+
+주주님의 건승과 댁내의 평안을 기원합니다.
+당사는 상법 제363조와 정관 제18조에 의거 정기주주총회를 아래와 같이
+개최 하오니 참석하여 주시기 바랍니다.
+
+【아 래】
+
+1. 정기주주총회 일자 : 2020년 3월 27일 (금요일 오전 09:00)
+2. 장 소 : 경기도 안양시 동안구 시민대로327번길 11-14(관양동)
+
+(주)프로텍 6층 Conference Room
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="no22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">전자증권법 시행에 따른 공고문</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body" style="text-align: center">
+<img src="{% static 'www/no22.jpg' %}">
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="no21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">무상증자 신주발행 공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body" style="text-align: left">
+<pre>
+무상증자 신주발행 공고
+2019년 6월 20일 개최한 (주)프로텍이사회에서 아래와 같이 준비금을 자본에 전입하고, 그에따라 신주를 발행하기로
+결의하였으므로 공고합니다.
+
+- 아       래 -
+
+1. 자본에 전입할 금액과 재원 : 주식발행초과금 340,819,500원
+
+2. 자본전입에 따른 신주의 발행내역
+
+ 가. 신주의 종류와 수 : 기명식 보통주 681,639주
+ 나. 신주의 발행가액 : 1주당 500원
+ 다. 신주의 배정기준일 : 2019년 7월 8일
+ 라. 신주배정방법 : 신주배정일 현재 주주명부에 등재된 주주(자기주식제외)에 대하여 보유주식 1주당0.07046543주의
+     비율로 신주를 배정함. 단 1주미만의 단수주에 대해서는 신주의 상장 초일 종가를 기준으로 매각하여 현금으로 지급함.
+ 마. 신주의 배당기산일 : 2019년 1월 1일
+ 바. 신주권 교부예정일 : 2019년 7월 31일
+ 사. 기타 본 준비금의 자본전입에관한 세부사항은 대표이사에게 위임함.
+
+
+신주발행기준일 및 주식명의개서정지 공고
+
+상법 제354조 및 당사 정관 제12조에 의거 신주배정을 위하여 다음과 같이주식의 명의개서, 질권의 등록 및 그 변경과 말소,
+신탁재산의표시 또는 말소 등 주주명부의 기재사항 변경을 정지하오니 양지하시기 바랍니다.
+
+- 다      음 -
+
+1. 신주배정기준일(주주확정일) : 2019년 7월 8일
+
+2. 명의개서 정지기간 : 2019년 7월 9일부터 2019년 7월 16일까지
+
+2019년  6월  20일
+
+경기도 안양시 동안구 시민대로327번길 11-14(관양동)
+
+주식회사 프로텍
+대표이사 최 승 환
+명의개서대리인 주식회사 KEB하나은행 은행장 지성규
+
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="no20" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">제22기 결산공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/제22기_결산공고.pdf' %}">제22기_결산공고.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="no19" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">제22기 주주총회소집공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/22기 정기주주총회소집공고.pdf' %}">22기 정기주주총회소집공고.pdf</a>
+
+주주총회 소집공고
+
+주주님의 건승과 댁내의 평안을 기원합니다.
+
+당사는 상법 제363조와 정관 제18조에 의거 정기주주총회를 아래와 같이
+개최 하오니 참석하여 주시기 바랍니다.
+
+【아 래】
+
+1. 정기주주총회 일자 : 2019년 3월 28일 (목요일 오전 09:00)
+2. 장 소 : 경기도 안양시 동안구 시민대로327번길 11-14(관양동)
+
+(주)프로텍 6층 Conference Room
+
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="no18" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">프로텍 소개 자료</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/프로텍_기술분석보고서.pdf' %}">프로텍_기술분석보고서.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="no17" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">합병 종료 보고 공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+합병 종료 보고 공고
+
+주식회사 프로텍은 상법 제527조의3 제1항에 따라 2018년3월15일에 개최된 주주총회 갈음 이사
+회에서 주식회사 피에스의 흡수합병(소규모합병)에 대한 승인을 득한 후, 채권자보호절차 등 합병
+에 필요한 상법상 소정의 절차를 완료하였기에 상법 제526조 제1항 및 제3항에 의거, 합병종료보
+고 주주총회에 갈음하여 다음과 같이 공고합니다.
+
+1. 합병내용
+
+    가. 합병당사회사 : 존속회사(주식회사 프로텍), 소멸회사(주식회사 피에스)
+    나. 합병의 방법 : 주식회사 프로텍이 주식회사 피에스를 흡수합병
+    다. 합병비율 : 주식회사 프로텍 : 주식회사 피에스 = 1 : 0
+    라. 합병기일 : 2018년 4월 17일
+
+2. 합병 진행 경과
+    - 2018년2월14일 : 합병계약 체결
+    - 2018년3월15일 : 합병승인 이사회결의
+    - 2018년3월16일 : 채권자이의제출공고(회사의 인터넷홈페이지)
+    - 2018년4월16일 : 채권자이의제출 기간만료(채권자 이의제출 없음)
+    - 2018년4월17일 : 합병기일
+    - 2018년4월18일 : 이사회결의(합병보고 주주총회를 공고로 갈음)
+    - 2018년4월19일 : 합병종료보고 공고
+
+3. 주식회사 프로텍은 합병기일 현재 주식회사 피에스의 자산, 부채 및 권리와 의무 일체를 승계하였음
+
+    2018년 4월 19일
+
+    경기도 안양시 동안구 시민대로327번길 11-14
+    주식회사 프로텍
+    대표이사 최승환
+
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="no16" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">제21기 결산공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/제21기_결산공고.pdf' %}">제21기_결산공고.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="no15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">소규모합병에 따른 채권자 이의제출 공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/소규모합병에_따른_채권자_이의제출_공고(프로텍).pdf' %}">소규모합병에_따른_채권자_이의제출_공고(프로텍).pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="no14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">소규모 합병 공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/소규모_합병_공고.pdf' %}">소규모_합병_공고.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="no13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">주주확정 기준일 및 주식명의개서 정지공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/기준일_및_주식명의개서_정지_공고문.pdf' %}">기준일_및_주식명의개서_정지_공고문.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="no12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">내부정보관리규정-개정</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/내부정보관리규정-개정.pdf' %}">내부정보관리규정-개정.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="no11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">제20기 결산공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : <a href="{% static 'www/file/제20기_결산공고.pdf' %}">제20기_결산공고.pdf</a>
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="no10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">제19기 결산공고</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<pre>
+파일 : 제19기_결산공고.pdf
+</pre>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,643 @@
+{% load static %}
+<html lang="ko">
+<head>
+    <title>(주)프로텍</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+    <link href="{% static 'www/css/style.css' %}" rel="stylesheet"/>
+
+<style>
+
+tr
+	{mso-height-source:auto;}
+col
+	{mso-width-source:auto;}
+br
+	{mso-data-placement:same-cell;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:129;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:표준;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl65
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#1F4E78;
+	mso-pattern:black none;}
+.xl66
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid black;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#1F4E78;
+	mso-pattern:black none;}
+.xl67
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#7B7B7B;
+	mso-pattern:black none;}
+.xl68
+	{mso-style-parent:style0;
+	color:white;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid black;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#7B7B7B;
+	mso-pattern:black none;}
+.xl69
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	vertical-align:middle;}
+.xl70
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;}
+.xl71
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid gray;
+	border-left:1.0pt solid gray;}
+.xl72
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid gray;
+	border-left:none;}
+.xl73
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid gray;}
+.xl74
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	vertical-align:middle;
+	border-top:none;
+	border-right:1.0pt solid gray;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;}
+.xl75
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;}
+.xl76
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;}
+.xl77
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#F2F2F2;
+	mso-pattern:black none;}
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+<div class="container" style="background-image: url('{% static 'www\main02.png' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+
+
+
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef;">
+    <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
+        <div>
+            <ul>
+                <p class="sidenavtitle">회사소개</p>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../company">　- 회사개요</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../vision">　- 기업비전</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../history">　- 회사연혁</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../orgnation">　- 조직도</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../certificate">　- 지적재산권</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../map">　- 오시는길</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../product">제품소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../#" onclick="javascript:alert('준비중입니다.')">고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../stocknotice">투자정보</a>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 회사소개 > 조직도</div>
+        <div class="col-xs" style="font-size: 25px">조직도</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
+<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px";>
+세계속에 당당한 프로텍
+프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
+</pre>
+        </div>
+        <div class="row p-5">
+<div style="width: 70px"></div>
+
+
+
+
+
+
+<table border=0 cellpadding=0 cellspacing=0 width=582 style='border-collapse:
+ collapse;table-layout:fixed;width:439pt'>
+ <col class=xl69 width=14 style='mso-width-source:userset;mso-width-alt:512;
+ width:11pt'>
+ <col class=xl69 width=64 span=2 style='mso-width-source:userset;mso-width-alt:
+ 2340;width:48pt'>
+ <col class=xl69 width=14 style='mso-width-source:userset;mso-width-alt:512;
+ width:11pt'>
+ <col class=xl69 width=64 span=2 style='width:48pt'>
+ <col class=xl69 width=14 style='mso-width-source:userset;mso-width-alt:512;
+ width:11pt'>
+ <col class=xl69 width=64 span=2 style='width:48pt'>
+ <col class=xl69 width=14 style='mso-width-source:userset;mso-width-alt:512;
+ width:11pt'>
+ <col class=xl69 width=64 span=2 style='width:48pt'>
+ <col class=xl69 width=14 style='mso-width-source:userset;mso-width-alt:512;
+ width:11pt'>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 width=14 style='height:17.25pt;width:11pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=14 style='width:11pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=14 style='width:11pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=14 style='width:11pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=64 style='width:48pt'></td>
+  <td class=xl69 width=14 style='width:11pt'><span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl69 style='height:30.0pt'></td>
+  <td colspan=2 class=xl65 style='border-right:1.0pt solid black'>대표이사</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl69 style='height:30.0pt'></td>
+  <td class=xl70></td>
+  <td class=xl71>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl72>&nbsp;</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl69 style='height:30.0pt'></td>
+  <td class=xl69></td>
+  <td class=xl73>&nbsp;</td>
+  <td class=xl69></td>
+  <td class=xl74>&nbsp;</td>
+  <td class=xl75>&nbsp;</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl73>&nbsp;</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl73>&nbsp;</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl69 style='height:30.0pt'><span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=2 class=xl67 style='border-right:1.0pt solid black'>경영관리부</td>
+  <td class=xl69><span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=2 class=xl67 style='border-right:1.0pt solid black'>시스템사업부1</td>
+  <td class=xl69><span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=2 class=xl67 style='border-right:1.0pt solid black'>시스템사업부3</td>
+  <td class=xl69><span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=2 class=xl67 style='border-right:1.0pt solid black'>부설연구소</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>회계</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>영업</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>영업</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>기구설계</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>인사/총무</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>품질</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>품질</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>소프트웨어</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>전산</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>구매/자재</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>구매/자재</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>헤드개발</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>고객지원</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>고객지원</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>전장설계</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>생산</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>생산</td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>비젼</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>외주관리</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>하드웨어</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>생산기술</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>컨트롤러</td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 class=xl69 style='height:17.25pt'></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td colspan=2 class=xl76 style='border-right:1.0pt solid black'>설비기술</td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl69 style='height:16.5pt'><span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+  <td class=xl69></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=14 style='width:11pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=14 style='width:11pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=14 style='width:11pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=14 style='width:11pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=64 style='width:48pt'></td>
+  <td width=14 style='width:11pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    {% include "www/share/footer.html" %}
+
+
+
+</div>
+<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+</body>
+</html>

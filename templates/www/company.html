@@ -1,0 +1,89 @@
+{% load static %}
+<html lang="ko">
+{% include "www/share/head.html" %}
+<body>
+<div class="container" style="background-image: url('{% static 'www\main02.png' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+
+
+
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef;">
+    <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
+        <div>
+            <ul>
+                <p class="sidenavtitle">회사소개</p>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../company">　- 회사개요</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../vision">　- 기업비전</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../history">　- 회사연혁</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../orgnation">　- 조직도</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../certificate">　- 지적재산권</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../map">　- 오시는길</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../product">제품소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../#" onclick="javascript:alert('준비중입니다.')">고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../stocknotice">투자정보</a>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 회사소개 > 회사개요</div>
+        <div class="col-xs" style="font-size: 25px">회사개요</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray";><br>
+<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px";>
+세계속에 당당한 프로텍
+프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
+</pre>
+        </div>
+        <div class="row">
+            <div class="p-5">
+<pre style="font-size: 16px">
+프로텍은 1997년 설립된 반도체 패키징관련 장비 제조 업체입니다.
+프로텍은 설립 이후 끊임없는 연구와 개발에 힘써 현재 반도체 및
+LED, SMTA분야의 고정도의 디스펜싱 분야 및 패키징 분야에서
+세계적인 기업으로 성장하였습니다.
+프로텍은 반도체 디펜싱 분야에서 세계를 제패한 기술력과 자신감을
+바탕으로 반도체 및 LED 패키징 분야의 토탈 솔루션을 제공할 수
+있도록 끊임없는 연구와 개발을 하고 있으며 이를 통해
+국가 산업발전에 기여하고 세계 최고의 반도체 장비 제조 기업이
+되도록 최선을 다할 것입니다.
+고객 여려분의 애정과 성원이 있기에 프로텍은 오늘도 도전을
+현실로 만들어 가고 있습니다.
+
+감사합니다.
+
+대표이사 최승환
+</pre>
+            </div>
+            <div class="p-5">
+                <img class="img-thumbnail" src="{% static 'www/img/ceo.png' %}">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    {% include "www/share/footer.html" %}
+
+
+
+</div>
+<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+</body>
+</html>

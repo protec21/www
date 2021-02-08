@@ -1,0 +1,74 @@
+{% load static %}
+<html lang="ko">
+{% include "www/share/head.html" %}
+<body>
+<div class="container" style="background-image: url('{% static 'www\main02.png' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+
+
+
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef;">
+    <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
+        <div>
+            <ul>
+                <p class="sidenavtitle">회사소개</p>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../company">　- 회사개요</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../vision">　- 기업비전</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../history">　- 회사연혁</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../orgnation">　- 조직도</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../certificate">　- 지적재산권</a></li>
+                <li style="font-size: 20px"><a class="sidenavsub" href="../map">　- 오시는길</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../product">제품소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../#" onclick="javascript:alert('준비중입니다.')">고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="sidenavtitle" href="../stocknotice">투자정보</a>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 회사소개 > 오시는길</div>
+        <div class="col-xs" style="font-size: 25px">오시는길</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray";><br>
+<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px">
+세계속에 당당한 프로텍
+프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
+</pre>
+        </div>
+<div class="m-5">
+        <div style="font-size: 20px">- 전화</div>
+        <div>경영관리부 : 031-470-0700,　영업부 : 031-470-0776,　연구소 : 031-470-0879</div><br>
+        <div style="font-size: 20px">- 주소</div>
+        <div>경기도 안양시 동안구 시민대로 327번길 11-14(관양동)</div>
+        <br>
+        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.7108023098976!2d126.96315484200011!3d37.39667097687692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5e22b4caa705%3A0x9380057d5d7fa30a!2z7ZSE66Gc7YWN!5e0!3m2!1sko!2skr!4v1612318220968!5m2!1sko!2skr" width="800" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+        <br>
+</div>
+    </div>
+</div>
+
+
+    {% include "www/share/footer.html" %}
+
+
+
+</div>
+<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
+<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+</body>
+</html>

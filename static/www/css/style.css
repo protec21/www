@@ -1,0 +1,48 @@
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+pre {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+div {
+    border: 0px solid blue;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover { text-decoration:none !important }
+
+.container {
+    max-width: none !important;
+    width: 1400px;
+}
+
+.box {
+    height: 500px;
+    background-color: #efefef;
+}
+
+.trans {
+    background: #0b2a41;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.navbarlink {
+    color: whitesmoke;
+}
+
+.mainlink {
+    color: gray;
+}
+.sidenavtitle {
+    color: black;
+}
+.sidenavsub {
+    color: darkgray;
+}
