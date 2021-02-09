@@ -31,11 +31,9 @@ def product(request):
 
 import re
 import requests
-import xmltodict
 def getStock():
     url = 'http://asp1.krx.co.kr/servlet/krx.asp.XMLSise?code=053610'
     req = requests.get(url).content
-    print(req)
 
     CurJuka = re.search(r'CurJuka=\"[0-9,]+\"', str(req))
     CurJuka = CurJuka.group()
