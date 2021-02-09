@@ -10,7 +10,7 @@
             <div style="position: relative; left: 970px; top: 0px; z-index: 1"><img src="{% static 'www/mainback02.png' %}" width="415"></img></div>
         </div>
         <div style="position: absolute;">
-            <div style="position: relative; left: 1070px; top: 420px; z-index: 1">
+            <div style="position: relative; left: 1080px; top: 390px; z-index: 1">
                 <p style="color: whitesmoke; font-size: 15px; line-height: 8px"><em>We Have Made Professional Technology</em></p>
                 <p style="color: whitesmoke; font-size: 36px; line-height: 8px">Professionalist</p>
             </div>
@@ -20,7 +20,7 @@
     <div style="height:387px">
     </div>
     <div class="row trans text-white align-items-center" style="height: 40px">
-        <div class="col-xs" style="width: 50px;"></div>
+        <div class="col-xs" style="width: 60px;"></div>
         <div class="col-xs">
             <strong>STOCK QUOTE</strong>
         </div>
@@ -28,17 +28,17 @@
         <div class="col-xs">
             CURRENT PRICE：
         </div>
-        <div class="col-xs">{{ stock.CurJuka }}</div>
+        <div class="col-xs" style="width: 100px; z-index: 10">{{ stock.CurJuka }}</div>
         <div class="col-xs" style="width: 100px;"></div>
         <div class="col-xs">
             KOSPI：
         </div>
-        <div class="col-xs">{{ stock.kospiJisu }}</div>
+        <div class="col-xs" style="width: 100px; z-index: 10">{{ stock.kospiJisu }}</div>
         <div class="col-xs" style="width: 100px;"></div>
-        <div class="col-xs">
+        <div class="col-xs" style="z-index: 10">
             KOSDAQ：
         </div>
-        <div class="col-xs" style="z-index: 10">{{ stock.kosdaqJisu }}</div>
+        <div class="col-xs" style="width: 100px; z-index: 10">{{ stock.kosdaqJisu }}</div>
     </div>
 
 
