@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'www/index.html', {'message': 'index'})
+    stock = getStock()
+    return render(request, 'www/index.html', {'stock': stock})
 def company(request):
     return render(request, 'www/company.html', {'message': 'company'})
 def vision(request):
@@ -22,3 +23,34 @@ def stock(request):
     return render(request, 'www/stock.html', {'message': 'stock'})
 def product(request):
     return render(request, 'www/product.html', {'message': 'product'})
+
+
+
+
+
+
+import re
+import requests
+import xmltodict
+def getStock():
+    url = 'http://asp1.krx.co.kr/servlet/krx.asp.XMLSise?code=053610'
+    req = requests.get(url).content
+    print(req)
+
+    CurJuka = re.search(r'CurJuka=\"[0-9,]+\"', str(req))
+    CurJuka = CurJuka.group()
+    CurJuka = CurJuka.replace('CurJuka=','')
+    CurJuka = CurJuka.replace('"', '')
+
+    kospiJisu = re.search(r'kospiJisu=\"[0-9.]+\"', str(req))
+    kospiJisu = kospiJisu.group()
+    kospiJisu = kospiJisu.replace('kospiJisu=','')
+    kospiJisu = kospiJisu.replace('"', '')
+
+    kosdaqJisu = re.search(r'kosdaqJisu=\"[0-9.]+\"', str(req))
+    kosdaqJisu = kosdaqJisu.group()
+    kosdaqJisu = kosdaqJisu.replace('kosdaqJisu=', '')
+    kosdaqJisu = kosdaqJisu.replace('"', '')
+
+    stock = {'CurJuka':CurJuka, 'kospiJisu':kospiJisu, 'kosdaqJisu':kosdaqJisu}
+    return stock
