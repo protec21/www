@@ -31,4 +31,3 @@ urlpatterns = [
     path('stock/', views.stock),
     path('product/', views.product),
 ]
-
