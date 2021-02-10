@@ -9,7 +9,7 @@ ul {
 }
 
 a:link { color: black }
-a:hover { text-decoration:none; color:#e56d22 !important }
+a:hover { text-decoration:none; color:#091a3b !important }
 
 .container {
     max-width: none !important;
@@ -25,18 +25,7 @@ a:hover { text-decoration:none; color:#e56d22 !important }
     background: #0b2a41;
     background: rgba(0, 0, 0, 0.3);
 }
-
-.navbarlink {
-    color: white;
-}
-
 .mainlink {
-    color: gray;
-}
-.sidenavtitle {
-    color: black;
-}
-.sidenavsub {
     color: gray;
 }
 .modal-backdrop {

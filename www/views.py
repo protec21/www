@@ -17,8 +17,8 @@ def certificate(request):
     return render(request, 'www/certificate.html', {'message': 'certificate'})
 def map(request):
     return render(request, 'www/map.html', {'message': 'map'})
-def stocknotice(request):
-    return render(request, 'www/stocknotice.html', {'message': 'stocknotice'})
+def notice(request):
+    return render(request, 'www/notice.html', {'message': 'notice'})
 def stock(request):
     return render(request, 'www/stock.html', {'message': 'stock'})
 def product(request):

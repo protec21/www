@@ -15,7 +15,7 @@ urlpatterns = [
     path('orgnation/', views.orgnation),
     path('certificate/', views.certificate),
     path('map/', views.map),
-    path('stocknotice/', views.stocknotice),
+    path('notice/', views.notice),
     path('stock/', views.stock),
     path('product/', views.product),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT}),
