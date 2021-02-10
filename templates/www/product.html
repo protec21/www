@@ -8,9 +8,6 @@
     <br>
     {% include "www/share/navbar.html" %}
     <div style="height:221px"></div>
-
-
-
 <!-- 사이드메뉴 -->
 <div class="row" style="background-color: #efefef;">
     <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
@@ -38,14 +35,15 @@
             </ul>
         </div>
     </div>
-    <div class="m-2" style="width: 1000px;">
+    <div class="m-2 font-sans-400" style="width: 1000px;">
         <div style="text-align: right; font-size: 12px;">홈 > 제품정보 > Dispenser</div>
         <div class="col-xs" style="font-size: 25px">Dispenser</div>
         <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
-<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px">
+<pre class="font-serif-500" style="font-size: 26px">
 세계속에 당당한 프로텍
 프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
 </pre>
+
         </div><br>
 
 
@@ -58,7 +56,7 @@
 <div style="width: 50px;"></div>
 <div style="border-bottom: 1px solid lightgray">
     <p style="font-size: 20px">FDS-1000 Dispensing System</p>
-<pre>
+<pre class="font-sans-300">
 ㆍCost effect Full automatic Gantry dispensing system
 ㆍLinear X-Y  Gantry system(Arm type)
 ㆍSingle pump Dispensing System * Refer to the below pump combination
@@ -83,7 +81,7 @@
 <div style="width: 50px;"></div>
 <div style="border-bottom: 1px solid lightgray">
     <p style="font-size: 20px">FDS-5000 Dispensing System</p>
-<pre>
+<pre class="font-sans-300">
 ㆍCost effect Full automatic Dual Gantry dispensing system
 ㆍDual Linear X-Y Gantry system(Arm type)
 ㆍDual pump Dispensing System * refer to the below pump combination
@@ -109,7 +107,7 @@
 <div style="width: 50px;"></div>
 <div style="border-bottom: 1px solid lightgray">
     <p style="font-size: 20px">FDS-5000DM Dispensing System</p>
-<pre>
+<pre class="font-sans-300">
 ㆍHigh Speed Full automatic Dual Gantry dispensing system
 ㆍDual Linear X-Y Gantry system(Semi type)
 ㆍ2xDualflex® pump Dispensing System * refer to the below pump combination
@@ -137,7 +135,7 @@
 <div style="width: 50px;"></div>
 <div style="border-bottom: 1px solid lightgray">
     <p style="font-size: 20px">Wonder-S Large Board Dispensing System</p>
-<pre>
+<pre class="font-sans-300">
 ㆍFull automatic Gantry dispensing system
 ㆍLinear X-Y  Gantry system(Semi type)
 ㆍSingle pump Dispensing System * Refer to the below pump combination
@@ -164,7 +162,7 @@
 <div style="width: 50px;"></div>
 <div>
     <p style="font-size: 20px">Wonder-SD Large Bard Dualflex Dispensing System</p>
-<pre>
+<pre class="font-sans-300">
 ㆍHigh Speed Full automatic Dual Gantry LED Bar lighting dispensing system
 ㆍDual Linear X-Y  Gantry system(Semi type)
 ㆍ2xDualflex® pump Dispensing System * refer to the below pump combination
@@ -190,20 +188,8 @@
 <br><br><br>
     </div>
 </div>
-
-
-
-
-
-
-    {% include "www/share/footer.html" %}
-
-
-
+{% include "www/share/footer.html" %}
 </div>
-<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
-<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
-<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
-<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+{% include "www/share/script.html" %}
 </body>
 </html>

@@ -8,9 +8,6 @@
     <br>
     {% include "www/share/navbar.html" %}
     <div style="height:221px"></div>
-
-
-
 <!-- 사이드메뉴 -->
 <div class="row" style="background-color: #efefef;">
     <div class="col-xs p-4" style="width: 250px; font-size: 30px; border-right: 1px solid lightgray;">
@@ -41,14 +38,15 @@
             </ul>
         </div>
     </div>
-    <div class="m-2" style="width: 1000px;">
+    <div class="m-2 font-sans-400" style="width: 1000px;">
         <div style="text-align: right; font-size: 12px;">홈 > 회사소개 > 기업비전</div>
         <div class="col-xs" style="font-size: 25px">기업비전</div>
         <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
-<pre style="font-family: 'Nanum Myeongjo', serif; font-size: 26px";>
+<pre class="font-serif-500" style="font-size: 26px">
 세계속에 당당한 프로텍
 프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
 </pre>
+
         </div>
         <div style="text-align: center; width: 800px">
             <p><br><br>"고객과 투자자의 이익을 극대화하는 고객중심의 경영추구"</p>
@@ -58,19 +56,8 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-    {% include "www/share/footer.html" %}
-
-
-
+{% include "www/share/footer.html" %}
 </div>
-<script src="{% static 'bootstrap\js\bootstrap.min.js' %}"></script>
-<script src="{% static 'bootstrap\js\jquery.min.js' %}"></script>
-<script src="{% static 'bootstrap\js\mdb.lite.min.js' %}"></script>
-<script src="{% static 'bootstrap\js\popper.min.js' %}"></script>
+{% include "www/share/script.html" %}
 </body>
 </html>
