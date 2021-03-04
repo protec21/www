@@ -2,8 +2,26 @@
 <html lang="ko">
 <head>
 {% include "www/share/head.html" %}
+<script>
+    $( function() {
+        $( "#popup1" ).draggable();
+    } );
+function show_popup(){
+    layer_popup(popup1, 100, 400, 300)
+    //layer_popup(popup2, 100, 750, 400)
+    //layer_popup(popup3, 100, 1200, 400)
+}
+function layer_popup(el, top, left, width){
+    var $el = $(el)
+    $el.fadeIn()
+    $el.css({top: top, left: left, width: width})
+    $el.find('button.btn-layerClose').click(function(){$el.fadeOut()})
+}
+</script>
+
+
 </head>
-<body>
+<body onload="show_popup();">
     <div class="container" style="width: 1400px; background-image: url('/static/www/main01.png')">
         <div class="col-xs" style="position: absolute;">
             <div class="col-xs" style="position: relative; left: -15px; top: 0px; z-index: 0"><img src={% static 'www/mainleft.png' %} width="300"></img></div>
@@ -22,10 +40,10 @@
     <div style="height:387px">
     </div>
     <div class="row trans text-white align-items-center font-sans-400" style="height: 40px">
-        <div class="col-xs" style="width: 70px"></div>
-        <div class="col-xs" style="z-index: 10"><img src="{% static 'www/img/chartstock.png'%}" width="21px" height="20px" style="display: block; margin-top: -5px"></div>
-        <div class="col-xs" style="width: 4px"></div>
+        <div class="col-xs" style="width: 66px"></div>
         <div class="col-xs" style="z-index: 10">STOCK QUOTE</div>
+        <div class="col-xs" style="width: 4px"></div>
+        <div class="col-xs" style="z-index: 10"><img src="{% static 'www/img/chartstock.png'%}" width="21px" height="20px" style="display: block; margin-top: -5px"></div>
         <div class="col-xs" style="width: 100px"></div>
         <div class="col-xs" style="z-index: 10">CURRENT PRICE：</div>
         <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.nowVal }}</div>
@@ -36,8 +54,6 @@
         <div class="col-xs" style="z-index: 10">KOSPI：</div>
         <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.kospi }}</div>
     </div>
-
-
     <div class="row font-sans-300" style="background-color: #efefef">
         <div style="width: 50px;"></div>
         <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray">
@@ -96,8 +112,68 @@ FAX : 032-822-9184<br>
                 src="{% static 'www\PRECISION GUIDE CYLINDER.png' %}"><br>PRECISION GUIDE CYLINDER</a>
         </div>
     </div>
+<div id="popup1" class="ui-widget-shadow rounded" style="display: none; position: absolute; height: auto; width: auto; z-index: 10; background-color: whitesmoke; opacity: 0.9">
+    <div class="pop-container">
+        <div class="pop-conts">
+            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px; cursor: move">프로텍</div>
+            <div style="border-top: solid 1px lightgray; border-bottom: solid 1px lightgray">
+                <img width="300px" src="http://www.anchihwan.com/files/attach/images/313/257/015/f2a659e0691731bc9ab5207c322b8c3d.gif">
+            </div>
+            <div style="padding: 5px; text-align: right">
+                <button type="button" class="btn btn-outline-dark btn-sm btn-layerClose" style="height: 23px; font-size: 11px">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup2" class="ui-widget-shadow rounded" style="display: none; position: absolute; height: auto; z-index: 10; background-color: whitesmoke; opacity: 0.9">
+    <div class="pop-container">
+        <div class="pop-conts">
+            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px">제목</div>
+            <div style="border-bottom: solid 1px lightgray">
+            <p>
+                팝업<br>
+            </p>
+            </div>
+            <div style="padding: 5px; text-align: right">
+                <button type="button" class="btn btn-outline-dark btn-sm btn-layerClose" style="height: 23px; font-size: 11px">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup3" class="ui-widget-shadow rounded" style="display: none; position: absolute; height: auto; z-index: 10; background-color: whitesmoke; opacity: 0.9">
+    <div class="pop-container">
+        <div class="pop-conts">
+            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px">제목</div>
+            <div style="border-bottom: solid 1px lightgray">
+            <p>
+                팝업<br>
+            </p>
+            </div>
+            <div style="padding: 5px; text-align: right">
+                <button type="button" class="btn btn-outline-dark btn-sm btn-layerClose" style="height: 23px; font-size: 11px">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$("#popup1").draggable({ containment: ".container", scroll: false, handle: "#title" });
+$("#popup2").draggable({ containment: ".container", scroll: false, handle: "#title" });
+$("#popup3").draggable({ containment: ".container", scroll: false, handle: "#title" });
+$("body").disableSelection();
+</script>
+
+
+
+
+
+
+
 {% include "www/share/footer.html" %}
 </div>
 {% include "www/share/script.html" %}
 </body>
 </html>
+
+
+
