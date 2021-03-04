@@ -21,38 +21,37 @@
     {% include "www/share/navbar.html" %}
     <div style="height:387px">
     </div>
-    <div class="row trans text-white align-items-center font-sans-200" style="height: 40px">
+    <div class="row trans text-white align-items-center font-sans-400" style="height: 40px">
         <div class="col-xs" style="width: 70px"></div>
-        <div class="col-xs" style="z-index: 10">STOCK QUOTE</div>
+        <div class="col-xs" style="z-index: 10"><img src="{% static 'www/img/chartstock.png'%}" width="22px" height="20px"> STOCK QUOTE</div>
         <div class="col-xs" style="width: 100px"></div>
         <div class="col-xs" style="z-index: 10">CURRENT PRICE：</div>
-        <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.CurJuka }}</div>
-        <div class="col-xs" style="width: 100px"></div>
-        <div class="col-xs" style="z-index: 10">KOSPI：</div>
-        <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.kospiJisu }}</div>
+        <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.nowVal }}</div>
         <div class="col-xs" style="width: 100px"></div>
         <div class="col-xs" style="z-index: 10">KOSDAQ：</div>
-        <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.kosdaqJisu }}</div>
+        <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.kosdaq }}</div>
+        <div class="col-xs" style="width: 100px"></div>
+        <div class="col-xs" style="z-index: 10">KOSPI：</div>
+        <div class="col-xs" style="z-index: 10; width: 60px">{{ stock.kospi }}</div>
     </div>
-
-
-
-
 
 
     <div class="row font-sans-300" style="background-color: #efefef">
         <div style="width: 50px;"></div>
-        <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray" ;>
+        <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray">
 <h5 class="font-sans-500">본사</h5>
-<pre class="font-sans-300" style="color: dimgray">
-Dispensing M/C, Die-Bonder M/C
-Semicon, LED Manufacturing M/C
 
-전화 : 031-470-0700
-팩스 : 031-470-0701
-경기도 안양시 동안구 시민대로
+
+<p class="font-sans-300" style="color: dimgray; font-size: 13px">
+Dispensing M/C, Die-Bonder M/C<br>
+Semicon, LED Manufacturing M/C
+</p>
+<p class="font-sans-300" style="font-size: 14px">
+전화 : 031-470-0700<br>
+팩스 : 031-470-0701<br>
+경기도 안양시 동안구 시민대로<br>
 327번길 11-14(관양동)
-</pre>
+</p>
         </div>
         <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
                 style="max-height: 150px; filter: grayscale(50%);" src="{% static 'www\DISPENCER SYSTEM.png' %}"><br>DISPENCER SYSTEM</a>
@@ -69,17 +68,18 @@ Semicon, LED Manufacturing M/C
 
     <div class="row font-sans-300" style="background-color: #efefef; border-top: 1px solid lightgray">
         <div style="width: 50px;"></div>
-        <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray" ;>
+        <div class="col-xs text-left m-3" style="width: 300px; border-right: 1px solid lightgray">
 <h5 class="font-sans-500">피앤엠</h5>
-<pre class="font-sans-300" style="color: dimgray">
-Penumetic
+<p class="font-sans-300" style="color: dimgray; font-size: 13px">
+Penumetic<br>
 Cylinder
-
-전화 : 032-822-9183
-팩스 : 032-822-9184
-인천광역시 남동구 함박뫼로411
+</p>
+<p class="font-sans-300" style="font-size: 14px">
+전화 : 032-822-9183<br>
+팩스 : 032-822-9184<br>
+인천광역시 남동구 함박뫼로411<br>
 43블럭12롯트
-</pre>
+</p>
         </div>
         <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="http://protec.caddata.co.kr"><img
                 style="max-height: 150px; filter: grayscale(50%);" src="{% static 'www\GENERAL CYLINDER.png' %}"><br>GENERAL CYLINDER</a>

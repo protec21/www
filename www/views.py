@@ -1,9 +1,13 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from bs4 import BeautifulSoup
+import requests
+import re
+import time
 
 # Create your views here.
 def index(request):
-    stock = getStock()
+    stock=finance()
     return render(request, 'www/index.html', {'stock': stock})
 def company(request):
     return render(request, 'www/company.html', {'message': 'company'})
@@ -26,29 +30,27 @@ def product(request):
 
 
 
+def finance():
+    url = 'https://finance.naver.com/item/main.nhn?code=053610'
+    response = requests.get(url)
+    response.raise_for_status()
+    html = response.text
+    soup = BeautifulSoup(html, 'html.parser')
+    _nowVal = soup.select_one('#content > div.section.trade_compare > table > tbody > tr:nth-child(1) > td:nth-child(2)')
+    _nowVal = _nowVal.text
+    print(_nowVal)
 
+    url = 'https://finance.naver.com/sise'
+    response = requests.get(url)
+    response.raise_for_status()
+    html = response.text
+    soup = BeautifulSoup(html, 'html.parser')
+    _kospi = soup.select_one('#KOSPI_now')
+    _kospi = _kospi.text
+    print(_kospi)
+    _kosdaq = soup.select_one('#KOSDAQ_now')
+    _kosdaq = _kosdaq.text
+    print(_kosdaq)
 
-
-import re
-import requests
-def getStock():
-    url = 'http://asp1.krx.co.kr/servlet/krx.asp.XMLSise?code=053610'
-    req = requests.get(url).content
-
-    CurJuka = re.search(r'CurJuka=\"[0-9,]+\"', str(req))
-    CurJuka = CurJuka.group()
-    CurJuka = CurJuka.replace('CurJuka=','')
-    CurJuka = CurJuka.replace('"', '')
-
-    kospiJisu = re.search(r'kospiJisu=\"[0-9.]+\"', str(req))
-    kospiJisu = kospiJisu.group()
-    kospiJisu = kospiJisu.replace('kospiJisu=','')
-    kospiJisu = kospiJisu.replace('"', '')
-
-    kosdaqJisu = re.search(r'kosdaqJisu=\"[0-9.]+\"', str(req))
-    kosdaqJisu = kosdaqJisu.group()
-    kosdaqJisu = kosdaqJisu.replace('kosdaqJisu=', '')
-    kosdaqJisu = kosdaqJisu.replace('"', '')
-
-    stock = {'CurJuka':CurJuka, 'kospiJisu':kospiJisu, 'kosdaqJisu':kosdaqJisu}
+    stock = {'nowVal': _nowVal, 'kosdaq': _kosdaq, 'kospi': _kospi}
     return stock
