@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 import requests
+import datetime
+import json
 
 def index(request):
     url = 'https://finance.naver.com/item/main.nhn?code=053610'
@@ -45,4 +47,13 @@ def product_attach(request):
 def finance_notice(request):
     return render(request, 'www/finance_notice.html', {'message': 'notice'})
 def finance_disclosure(request):
-    return render(request, 'www/finance_disclosure.html', {'message': 'disclosure'})
+    with open("secret.json") as f:
+        secrets = json.loads(f.read())
+    DART_KEY = secrets['DART_KEY']
+    date_ago = datetime.datetime.now() - datetime.timedelta(days=365)
+    print(date_ago.strftime("%Y%m%d"))
+    startDate = date_ago.strftime("%Y%m%d")
+    url = 'https://opendart.fss.or.kr/api/list.json?crtfc_key='+DART_KEY+'&corp_code=00325112&bgn_de='+startDate
+    response = requests.get(url)
+    response.raise_for_status()
+    return render(request, 'www/finance_disclosure.html', {'message': response.json()['list']})
