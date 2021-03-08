@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import datetime
 import json
+from .models import Notice
 
 def index(request):
     url = 'https://finance.naver.com/item/main.nhn?code=053610'
@@ -44,8 +45,14 @@ def product_diebonder(request):
     return render(request, 'www/product_diebonder.html', {'message': 'diebonder'})
 def product_attach(request):
     return render(request, 'www/product_attach.html', {'message': 'attach'})
+
+
 def finance_notice(request):
-    return render(request, 'www/finance_notice.html', {'message': 'notice'})
+    notices = Notice.objects.all()
+    return render(request, 'www/finance_notice.html', {'notices': notices})
+
+
+
 def finance_disclosure(request):
     with open("secret.json") as f:
         secrets = json.loads(f.read())

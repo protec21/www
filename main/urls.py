@@ -22,3 +22,7 @@ urlpatterns = [
     path('finance/disclosure',      views.finance_disclosure,       name='finance_disclosure'),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT}),
 ]
+
+admin.site.site_header = "관리자페이지" #"Django Administration"
+admin.site.index_title = "Site administration"
+admin.site.site_title = "Django site admin"

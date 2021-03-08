@@ -63,6 +63,9 @@
                     </tr>
                 </thead>
                 <tbody style="background-color: whitesmoke">
+                    {% for notice in notices %}
+                    <tr><td>{{ notice.id }}</td><td>{{ notice.date|date:"Y-m-d" }}</td><td><a data-toggle="modal" href="#no{{ notice.id }}" style="color: #091a3b">{{ notice.title }}</a></td></tr>
+                    {% endfor %}
                     <tr><td>24</td><td>2020-08-28</td><td><a data-toggle="modal" href="#no24" style="color: #091a3b">프로텍 소개 자료</a></td></tr>
                     <tr><td>23</td><td>2020-03-16</td><td><a data-toggle="modal" href="#no23" style="color: #091a3b">제23기 주주총회소집공고</a></td></tr>
                     <tr><td>22</td><td>2019-08-14</td><td><a data-toggle="modal" href="#no22" style="color: #091a3b">전자증권법 시행에 따른 공고</a></td></tr>
@@ -87,6 +90,7 @@
                     <tr><td>3</td><td>2013-03-22</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제16기 결산공고</a></td></tr>
                     <tr><td>2</td><td>2013-03-07</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제16기 주주총회소집공고</a></td></tr>
                     <tr><td>1</td><td>2013-01-17</td><td><a data-toggle="modal" href="#" style="color: #091a3b">(주)프로텍 내부정보관리규정</a></td></tr>
+
                 </tbody>
             </table>
         </div>
@@ -98,11 +102,30 @@
 {% include "www/share/footer.html" %}
 </div>
 {% include "www/share/script.html" %}
+
+
+
 </body>
 </html>
 
-
-
+{% for notice in notices %}
+<div class="modal fade" id="no{{ notice.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{ notice.title }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                {{ notice.content|linebreaksbr }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
 
 
