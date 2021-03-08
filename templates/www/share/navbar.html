@@ -2,22 +2,22 @@
     <div class="row trans text-white align-items-center font-sans-700" style="height: 50px">
         <div class="col-xs" style="width: 50px"></div>
         <div class="col-xs" style="z-index: 10">
-            <a href=".."><img src="{% static 'www/logo.png' %}"/></a>
+            <a href="{% url 'index' %}"><img src="{% static 'www/logo.png' %}"/></a>
         </div>
         <div class="col-xs" style="width: 450px"></div>
         <div class="col-xs" style="z-index: 10">
-            <h4 style="margin-top: 5px"><a style="color: white" href="../company">회사소개</a></h4>
+            <h4 style="margin-top: 5px"><a style="color: white" href="{% url 'company_intro' %}">Company</a></h4>
         </div>
         <div class="col-xs" style="width: 70px"></div>
         <div class="col-xs" style="z-index: 10">
-            <h4 style="margin-top: 5px"><a style="color: white" href="../product">제품소개</a></h4>
+            <h4 style="margin-top: 5px"><a style="color: white" href="{% url 'product_dispenser' %}">Product</a></h4>
         </div>
         <div class="col-xs" style="width: 70px"></div>
         <div class="col-xs" style="z-index: 10">
-            <h4 style="margin-top: 5px"><a style="color: white" href="../notice">공지사항</a></h4>
+            <h4 style="margin-top: 5px"><a onclick="alert('준비중입니다.')" style="color: white" href="">Customer</a></h4>
         </div>
         <div class="col-xs" style="width: 70px"></div>
         <div class="col-xs" style="z-index: 10">
-            <h4 style="margin-top: 5px"><a style="color: white" href="#" onclick="javascript:alert('준비중입니다.')">투자정보</a></h4>
+            <h4 style="margin-top: 5px"><a style="color: white" href="{% url 'finance_notice' %}">Finance</a></h4>
         </div>
     </div>

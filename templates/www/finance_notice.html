@@ -13,72 +13,90 @@
     <div class="col-xs p-4" style="width: 250px; border-right: 1px solid lightgray">
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="../company">회사소개</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'company_intro' %}">회사소개</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="../product">제품소개</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'product_dispenser' %}">제품소개</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="../notice" >공지사항</a>
+                <a onclick="alert('준비중입니다.')" class="font-sans-500" style="font-size: 26px; color: black" href="#" >고객지원</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="#" onclick="javascript:alert('준비중입니다.')">투자정보</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black">투자정보</a>
+                <div class="font-sans-300" style="font-size: 20px">
+                    <li><a style="color: dimgray" href="{% url 'finance_notice' %}">- 회사공고</a></li>
+                    <li><a style="color: dimgray" href="{% url 'finance_disclosure' %}">- 공시정보</a></li>
+                    <li><a style="color: dimgray" href="#">- 주가정보</a></li>
+                    <li><a style="color: dimgray" href="#">- 재무정보</a></li>
+                </div>
             </ul>
         </div>
     </div>
     <div class="m-2 font-sans-400" style="width: 1000px;">
-        <div style="text-align: right; font-size: 12px;">홈 > 투자정보 > 공지사항</div>
-        <div class="col-xs" style="font-size: 25px">공지사항</div>
+        <div style="text-align: right; font-size: 12px;">홈 > 투자정보 > 회사공고</div>
+        <div class="col-xs" style="font-size: 25px">회사공고</div>
         <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
 <pre class="font-serif-500" style="font-size: 26px">
 세계속에 당당한 프로텍
 프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
 </pre>
         </div>
-<br>
-<table class="table table-striped m-4" style="width: 95%; font-size: 19px">
-    <!--
-    <thead>
-        <tr><th style="text-align: center">#</th><th>제목</th><th>작성일</th></tr>
-    </thead>
-    -->
-    <tbody>
-        <tr><th style="text-align: right">24.</th><th><a data-toggle="modal" href="#no24">프로텍 소개 자료</a></th><th>2020-08-28</th></tr>
-        <tr><th style="text-align: right">23.</th><th><a data-toggle="modal" href="#no23">제23기 주주총회소집공고</a></th><th>2020-03-16</th></tr>
-        <tr><th style="text-align: right">22.</th><th><a data-toggle="modal" href="#no22">전자증권법 시행에 따른 공고</a></th><th>2019-08-14</th></tr>
-        <tr><th style="text-align: right">21.</th><th><a data-toggle="modal" href="#no21">무상증자 신주발행 공고</a></th><th>2019-06-20</th></tr>
-        <tr><th style="text-align: right">20.</th><th><a data-toggle="modal" href="#no20">제22기 결산공고</a></th><th>2019-03-28</th></tr>
-        <tr><th style="text-align: right">19.</th><th><a data-toggle="modal" href="#no19">제22기 주주총회소집공고</a></th><th>2019-03-13</th></tr>
-        <tr><th style="text-align: right">18.</th><th><a data-toggle="modal" href="#no18">프로텍 소개 자료</a></th><th>2019-01-28</th></tr>
-        <tr><th style="text-align: right">17.</th><th><a data-toggle="modal" href="#no17">합병 종료 보고 공고</a></th><th>2018-04-19</th></tr>
-        <tr><th style="text-align: right">16.</th><th><a data-toggle="modal" href="#no16">제21기 결산공고</a></th><th>2018-03-22</th></tr>
-        <tr><th style="text-align: right">15.</th><th><a data-toggle="modal" href="#no15">소규모합병에 따른 채권자 이의제출 공고</a></th><th>2018-03-16</th></tr>
-        <tr><th style="text-align: right">14.</th><th><a data-toggle="modal" href="#no14">소규모 합병 공고</a></th><th>2018-02-28</th></tr>
-        <tr><th style="text-align: right">13.</th><th><a data-toggle="modal" href="#no13">주주확정 기준일 및 주식명의개서 정지공고</a></th><th>2018-02-12</th></tr>
-        <tr><th style="text-align: right">12.</th><th><a data-toggle="modal" href="#no12">내부정보관리규정-개정</a></th><th>2017-08-29</th></tr>
-        <tr><th style="text-align: right">11.</th><th><a data-toggle="modal" href="#no11">제20기 결산공고</a></th><th>2017-03-24</th></tr>
-        <tr><th style="text-align: right">10.</th><th><a data-toggle="modal" href="#no10">제19기 결산공고</a></th><th>2016-03-25</th></tr>
-<!--
-        <tr><th style="text-align: right">9.</th><th><a data-toggle="modal" href="#">주주총회소집공고(2016-03-10)</a></th><th>2016-03-10</th></tr>
-        <tr><th style="text-align: right">8.</th><th><a data-toggle="modal" href="#">주총소집공고(2015-11-19)</a></th><th>2015-11-19</th></tr>
-        <tr><th style="text-align: right">7.</th><th><a data-toggle="modal" href="#">임시주주총회를 위한 주주명부폐쇄 및 기준일공고</a></th><th>2015-10-23</th></tr>
-        <tr><th style="text-align: right">6.</th><th><a data-toggle="modal" href="#">제18기 결산공고</a></th><th>2015-03-27</th></tr>
-        <tr><th style="text-align: right">5.</th><th><a data-toggle="modal" href="#">제17기 결산공고</a></th><th>2014-03-21</th></tr>
-        <tr><th style="text-align: right">4.</th><th><a data-toggle="modal" href="#">제17기 주주총회소집공고</a></th><th>2014-03-19</th></tr>
-        <tr><th style="text-align: right">3.</th><th><a data-toggle="modal" href="#">제16기 결산공고</a></th><th>2013-03-22</th></tr>
-        <tr><th style="text-align: right">2.</th><th><a data-toggle="modal" href="#">제16기 주주총회소집공고</a></th><th>2013-03-07</th></tr>
-        <tr><th style="text-align: right">1.</th><th><a data-toggle="modal" href="#">(주)프로텍 내부정보관리규정</a></th><th>2013-01-17</th></tr>
--->
-    </tbody>
-</table>
+        <div style="height: 50px"></div>
+        <div class="font-sans-300" style="margin-left: 40px">
+            <h5>투자에 참고하실 수 있도록 프로텍의 정보를 제공해 드립니다.</h5>
+        </div>
+        <div class="font-sans-300" style="margin-left: 40px">
+            IR담당자 email: ksg0328@protec21.co.kr / tel: 031-470-0720
+        </div>
+        <div style="height: 20px"></div>
+        <div style="margin-left: 40px">
 
-<br><br><br>
+            <table class="table">
+                <thead style="background-color: lightgray">
+                    <tr>
+                        <td>번호</td>
+                        <td>날짜</td>
+                        <td>제목</td>
+                    </tr>
+                </thead>
+                <tbody style="background-color: whitesmoke">
+                    <tr><td>24</td><td>2020-08-28</td><td><a data-toggle="modal" href="#no24" style="color: #091a3b">프로텍 소개 자료</a></td></tr>
+                    <tr><td>23</td><td>2020-03-16</td><td><a data-toggle="modal" href="#no23" style="color: #091a3b">제23기 주주총회소집공고</a></td></tr>
+                    <tr><td>22</td><td>2019-08-14</td><td><a data-toggle="modal" href="#no22" style="color: #091a3b">전자증권법 시행에 따른 공고</a></td></tr>
+                    <tr><td>21</td><td>2019-06-20</td><td><a data-toggle="modal" href="#no21" style="color: #091a3b">무상증자 신주발행 공고</a></td></tr>
+                    <tr><td>20</td><td>2019-03-28</td><td><a data-toggle="modal" href="#no20" style="color: #091a3b">제22기 결산공고</a></td></tr>
+                    <tr><td>19</td><td>2019-03-13</td><td><a data-toggle="modal" href="#no19" style="color: #091a3b">제22기 주주총회소집공고</a></td></tr>
+                    <tr><td>18</td><td>2019-01-28</td><td><a data-toggle="modal" href="#no18" style="color: #091a3b">프로텍 소개 자료</a></td></tr>
+                    <tr><td>17</td><td>2018-04-19</td><td><a data-toggle="modal" href="#no17" style="color: #091a3b">합병 종료 보고 공고</a></td></tr>
+                    <tr><td>16</td><td>2018-03-22</td><td><a data-toggle="modal" href="#no16" style="color: #091a3b">제21기 결산공고</a></td></tr>
+                    <tr><td>15</td><td>2018-03-16</td><td><a data-toggle="modal" href="#no15" style="color: #091a3b">소규모합병에 따른 채권자 이의제출 공고</a></td></tr>
+                    <tr><td>14</td><td>2018-02-28</td><td><a data-toggle="modal" href="#no14" style="color: #091a3b">소규모 합병 공고</a></td></tr>
+                    <tr><td>13</td><td>2018-02-12</td><td><a data-toggle="modal" href="#no13" style="color: #091a3b">주주확정 기준일 및 주식명의개서 정지공고</a></td></tr>
+                    <tr><td>12</td><td>2017-08-29</td><td><a data-toggle="modal" href="#no12" style="color: #091a3b">내부정보관리규정-개정</a></td></tr>
+                    <tr><td>11</td><td>2017-03-24</td><td><a data-toggle="modal" href="#no11" style="color: #091a3b">제20기 결산공고</a></td></tr>
+                    <tr><td>10</td><td>2016-03-25</td><td><a data-toggle="modal" href="#no10" style="color: #091a3b">제19기 결산공고</a></td></tr>
+                    <tr><td>9</td><td>2016-03-10</td><td><a data-toggle="modal" href="#" style="color: #091a3b">주주총회소집공고(2016-03-10)</a></td></tr>
+                    <tr><td>8</td><td>2015-11-19</td><td><a data-toggle="modal" href="#" style="color: #091a3b">주총소집공고(2015-11-19)</a></td></tr>
+                    <tr><td>7</td><td>2015-10-23</td><td><a data-toggle="modal" href="#" style="color: #091a3b">임시주주총회를 위한 주주명부폐쇄 및 기준일공고</a></td></tr>
+                    <tr><td>6</td><td>2015-03-27</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제18기 결산공고</a></td></tr>
+                    <tr><td>5</td><td>2014-03-21</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제17기 결산공고</a></td></tr>
+                    <tr><td>4</td><td>2014-03-19</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제17기 주주총회소집공고</a></td></tr>
+                    <tr><td>3</td><td>2013-03-22</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제16기 결산공고</a></td></tr>
+                    <tr><td>2</td><td>2013-03-07</td><td><a data-toggle="modal" href="#" style="color: #091a3b">제16기 주주총회소집공고</a></td></tr>
+                    <tr><td>1</td><td>2013-01-17</td><td><a data-toggle="modal" href="#" style="color: #091a3b">(주)프로텍 내부정보관리규정</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="font-sans-300" style="margin-left: 40px">
+            정보제공: KRX 상장법인 지분정보센터
+        </div>
+        <div style="height: 100px"></div>
     </div>
 </div>
 {% include "www/share/footer.html" %}

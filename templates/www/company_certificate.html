@@ -15,28 +15,28 @@
             <ul>
                 <a class="font-sans-500" style="font-size: 26px; color: black" href="#">회사소개</a>
                 <div class="font-sans-300" style="font-size: 20px">
-                    <li><a style="color: dimgray" href="../company">- 회사개요</a></li>
-                    <li><a style="color: dimgray" href="../vision">- 기업비전</a></li>
-                    <li><a style="color: dimgray" href="../history">- 회사연혁</a></li>
-                    <li><a style="color: dimgray" href="../orgnation">- 조직도</a></li>
-                    <li><a style="color: dimgray" href="../certificate">- 지적재산권</a></li>
-                    <li><a style="color: dimgray" href="../map">- 오시는길</a></li>
+                    <li><a style="color: dimgray" href="{% url 'company_intro' %}">- 회사개요</a></li>
+                    <li><a style="color: dimgray" href="{% url 'company_vision' %}">- 기업비전</a></li>
+                    <li><a style="color: dimgray" href="{% url 'company_history' %}">- 회사연혁</a></li>
+                    <li><a style="color: dimgray" href="{% url 'company_orgnation' %}">- 조직도</a></li>
+                    <li><a style="color: dimgray" href="{% url 'company_certificate' %}">- 지적재산권</a></li>
+                    <li><a style="color: dimgray" href="{% url 'company_map' %}">- 오시는길</a></li>
                 </div>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="../product">제품소개</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'product_dispenser' %}">제품소개</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="../notice" >공지사항</a>
+                <a onclick="alert('준비중입니다.')" class="font-sans-500" style="font-size: 26px; color: black" href="#">고객지원</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="#" onclick="javascript:alert('준비중입니다.')">투자정보</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'finance_notice' %}">투자정보</a>
             </ul>
         </div>
     </div>

@@ -71,14 +71,14 @@ FAX : 031-470-0701<br>
 -->
 </p>
         </div>
-        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="{% url 'product_dispenser' %}"><img
                 style="max-height: 150px; filter: grayscale(50%);" src="{% static 'www\DISPENCER SYSTEM.png' %}"><br>DISPENCER SYSTEM</a>
         </div>
-        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="{% url 'product_dispenser' %}"><img
                 style="max-height: 150px; filter: grayscale(50%);"
                 src="{% static 'www\SOLIDER BALL PLACER FOR PCB.png' %}"><br>SOLIDER BALL PLACER FOR PCB</a>
         </div>
-        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="product"><img
+        <div class="col-xs text-center align-items-center m-3" style="width: 300px"><a class="mainlink" href="{% url 'product_dispenser' %}"><img
                 style="max-height: 150px; filter: grayscale(50%);" src="{% static 'www\LASER REFLOW.png' %}"><br>LASER REFLOW</a>
         </div>
     </div>
@@ -174,6 +174,3 @@ $("body").disableSelection();
 {% include "www/share/script.html" %}
 </body>
 </html>
-
-
-

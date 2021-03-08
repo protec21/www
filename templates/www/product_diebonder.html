@@ -1,0 +1,215 @@
+{% load static %}
+<html lang="ko">
+<head>
+{% include "www/share/head.html" %}
+</head>
+<body>
+<div class="container" style="background-image: url('{% static 'www\main03.png' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef;">
+    <div class="col-xs p-4" style="width: 250px; border-right: 1px solid lightgray">
+        <div>
+            <ul>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'company_intro' %}">회사소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="#">제품소개</a>
+                <div class="font-sans-300" style="font-size: 20px">
+                    <li><a style="color: dimgray" href="{% url 'product_dispenser' %}">- DISPENSER</a></li>
+                    <li><a onclick="alert('준비중입니다.')" style="color: dimgray">- DIE BONDER</a></li>
+                    <li><a onclick="alert('준비중입니다.')" style="color: dimgray">- ATTACH</a></li>
+                </div>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a onclick="alert('준비중입니다.')" class="font-sans-500" style="font-size: 26px; color: black" href="#">고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'finance_notice' %}">투자정보</a>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2 font-sans-400" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 제품정보 > DISPENSER</div>
+        <div class="col-xs" style="font-size: 25px">DISPENSER</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
+<pre class="font-serif-500" style="font-size: 26px">
+세계속에 당당한 프로텍
+프로텍은 최고의 인재와 기술력을 바탕으로 최고의 가치를 창출합니다.
+</pre>
+
+        </div>
+
+
+
+
+
+
+
+<div style="margin-top: 50px">
+    <div style="width: 500px; margin-left: 50px"><p style="font-size: 20px">FDS-1000 Dispensing System</p></div>
+    <div class="row" style="margin-left: 50px">
+    <div class="rounded-lg border" style="background-color: white; width: 250px; height: 230px; text-align: center; padding-top: 20px"><img style="filter: grayscale(50%)" src="{% static 'www/FDS-1000 Dispensing System.png' %}" width="150px"></div>
+    <div style="margin-left: 20px; border-bottom: 1px solid lightgray">
+<pre class="font-sans-300">
+ㆍCost effect Full automatic Gantry dispensing system
+ㆍLinear X-Y  Gantry system(Arm type)
+ㆍSingle pump Dispensing System * Refer to the below pump combination
+ㆍStandard 330mm x 250mm Board handing capability
+ㆍ3-Stage Conveyor system
+ㆍ3-Stage Conveyor Heating system *optional
+ㆍFly vision system
+ㆍLaser Height sensor
+ㆍSubstrate Heating system
+ㆍLoader / Unloader *optional
+ㆍMachine Dimension : 1100mm x 1100mm x1500mm
+</pre>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div style="margin-top: 50px">
+    <div style="width: 500px; margin-left: 50px"><p style="font-size: 20px">FDS-5000 Dispensing System</p></div>
+    <div class="row" style="margin-left: 50px">
+    <div class="rounded-lg border" style="background-color: white; width: 250px; height: 230px; text-align: center; padding-top: 20px"><img style="filter: grayscale(50%)" src="{% static 'www/FDS-5000 Dispensing System.gif' %}" width="200px"></div>
+    <div style="margin-left: 20px; border-bottom: 1px solid lightgray">
+<pre class="font-sans-300">
+ㆍCost effect Full automatic Dual Gantry dispensing system
+ㆍDual Linear X-Y Gantry system(Arm type)
+ㆍDual pump Dispensing System * refer to the below pump combination
+ㆍBoard Handling 260mm x 100mm * other size are available
+ㆍ2-Stage Conveyor system
+ㆍ2-Stage Conveyor Heating system *optional
+ㆍFly vision system
+ㆍLaser Height sensor
+ㆍSubstrate Heating system
+ㆍLoader / Unloader*optional
+ㆍMachine Dimension : 1200mm x 1325mm x1500mm
+</pre>
+    </div>
+    </div>
+</div>
+<br>
+
+
+
+
+
+
+
+<div style="margin-top: 50px">
+    <div style="width: 500px; margin-left: 50px"><p style="font-size: 20px">FDS-5000DM Dispensing System</p></div>
+    <div class="row" style="margin-left: 50px">
+    <div class="rounded-lg border" style="background-color: white; width: 250px; height: 230px; text-align: center; padding-top: 20px"><img style="filter: grayscale(50%)" src="{% static 'www/FDS-5000DM Dispensing System.gif' %}" width="200px"></div>
+    <div style="margin-left: 20px; border-bottom: 1px solid lightgray">
+<pre class="font-sans-300">
+ㆍHigh Speed Full automatic Dual Gantry dispensing system
+ㆍDual Linear X-Y Gantry system(Semi type)
+ㆍ2xDualflex® pump Dispensing System * refer to the below pump combination
+ㆍBoard Handling : 260mm x 100mm * other size are available
+ㆍ2-Stage Conveyor system
+ㆍ2-Stage Conveyor Heating system *optional
+ㆍFly vision system
+ㆍLaser Height sensor
+ㆍSubstrate Heating system
+ㆍLoader / Unloader*optional
+ㆍMachine Dimension : 1930mm x 1403mm x1500mm
+</pre>
+    </div>
+    </div>
+</div>
+<br>
+
+
+
+
+
+
+<div style="margin-top: 50px">
+    <div style="width: 500px; margin-left: 50px"><p style="font-size: 20px">Wonder-S Large Board Dispensing System</p></div>
+    <div class="row" style="margin-left: 50px">
+    <div class="rounded-lg border" style="background-color: white; width: 250px; height: 230px; text-align: center; padding-top: 20px"><img style="filter: grayscale(50%)" src="{% static 'www/Wonder-S Large Board Dispensing System.png' %}" width="150px"></div>
+    <div style="margin-left: 20px; border-bottom: 1px solid lightgray">
+<pre class="font-sans-300">
+ㆍFull automatic Gantry dispensing system
+ㆍLinear X-Y  Gantry system(Semi type)
+ㆍSingle pump Dispensing System * Refer to the below pump combination
+ㆍLarge board 500mm x 500mm Board handing capability
+ㆍ1-Stage Conveyor system
+ㆍ1-Stage Conveyor Heating system *optional
+ㆍFly vision system
+ㆍLaser Height sensor
+ㆍSubstrate Heating system
+ㆍLoader / Unloader*optional
+ㆍMachine Dimension :
+</pre>
+    </div>
+    </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+<div style="margin-top: 50px">
+    <div style="width: 500px; margin-left: 50px"><p style="font-size: 20px">Wonder-SD Large Bard Dualflex Dispensing System</p></div>
+    <div class="row" style="margin-left: 50px">
+    <div class="rounded-lg border" style="background-color: white; width: 250px; height: 230px; text-align: center; padding-top: 20px"><img style="filter: grayscale(50%)" src="{% static 'www/Wonder-SD Large Bard Dualflex Dispensing System.png' %}" width="200px"></div>
+    <div style="margin-left: 20px; border-bottom: 1px solid lightgray">
+<pre class="font-sans-300">
+ㆍHigh Speed Full automatic Dual Gantry LED Bar lighting dispensing system
+ㆍDual Linear X-Y  Gantry system(Semi type)
+ㆍ2xDualflex® pump Dispensing System * refer to the below pump combination
+ㆍBoard Handling  : 750mm x 400mm  * other size are available
+ㆍ2-Stage Conveyor system
+ㆍ2-Stage Conveyor Heating system *optional
+ㆍFly vision system
+ㆍLaser Height sensor
+ㆍSubstrate Heating system
+ㆍLoader / Unloader*optional
+ㆍMachine Dimension :  2200mm x 1390mm x 1600mm
+</pre>
+    </div>
+    </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+    </div>
+</div>
+{% include "www/share/footer.html" %}
+</div>
+{% include "www/share/script.html" %}
+</body>
+</html>
