@@ -48,7 +48,7 @@ def product_attach(request):
 
 
 def finance_notice(request):
-    notices = Notice.objects.all()
+    notices = Notice.objects.all().order_by('-date')
     return render(request, 'www/finance_notice.html', {'notices': notices})
 
 
