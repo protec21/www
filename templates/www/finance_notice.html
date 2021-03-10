@@ -4,12 +4,12 @@
 {% include "www/share/head.html" %}
 </head>
 <body>
-<div class="container" style="background-image: url('{% static 'www/finance.jpg' %}')">
+<div class="container" style="background-image: url('{% static 'www/img/finance.jpg' %}')">
     <br>
     {% include "www/share/navbar.html" %}
     <div style="height:221px"></div>
 <!-- 사이드메뉴 -->
-<div class="row" style="background-color: #efefef;">
+<div class="row" style="background-color: #efefef">
     <div class="col-xs p-4" style="width: 250px; border-right: 1px solid lightgray">
         <div>
             <ul>
@@ -54,17 +54,13 @@
         <div style="margin-left: 40px"></div>
         <div style="margin-left: 40px">
 
-            <table class="table">
-                <thead style="background-color: lightslategray; color: whitesmoke">
-                    <tr>
-                        <td>번호</td>
-                        <td>날짜</td>
-                        <td>제목</td>
-                    </tr>
+            <table class="table table-borderless">
+                <thead style="background-color: whitesmoke; color: black; border-top: black solid 2PX; border-bottom: black solid 1px">
+                    <tr class="font-sans-500"><td>제목</td><td>공지일자</td></tr>
                 </thead>
                 <tbody style="background-color: whitesmoke">
                     {% for notice in notices %}
-                    <tr><td>{{ notice.id }}</td><td>{{ notice.date|date:"Y-m-d" }}</td><td><a data-toggle="modal" href="#notice{{ notice.id }}" style="color: #091a3b">{{ notice.title }}</a></td></tr>
+                    <tr style="border-bottom: gainsboro solid 1px"><td><a data-toggle="modal" href="#notice{{ notice.id }}" style="color: #212121">{{ notice.title }}</a></td><td>{{ notice.date|date:"Y-m-d" }}</td></tr>
                     {% endfor %}
                 </tbody>
             </table>
