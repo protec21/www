@@ -1,0 +1,193 @@
+{% load static %}
+<html lang="ko">
+<head>
+{% include "www/share/head.html" %}
+</head>
+<body>
+<div class="container" style="background-image: url('{% static 'www/img/finance.jpg' %}')">
+    <br>
+    {% include "www/share/navbar.html" %}
+    <div style="height:221px"></div>
+<!-- 사이드메뉴 -->
+<div class="row" style="background-color: #efefef">
+    <div class="col-xs p-4" style="width: 250px; border-right: 1px solid lightgray">
+        <div>
+            <ul>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'company_intro' %}">회사소개</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'product_dispenser' %}">제품정보</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a onclick="alert('준비중입니다.')" class="font-sans-500" style="font-size: 26px; color: black" href="#" >고객지원</a>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <a class="font-sans-500" style="font-size: 26px; color: black">투자정보</a>
+                <div class="font-sans-300" style="font-size: 20px">
+                    <li><a style="color: dimgray" href="{% url 'investment_disclosure' %}">- 공시정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_stock' %}">- 주가정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_finance' %}">- 재무정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_notice' %}">- 회사공고</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="m-2 font-sans-400" style="width: 1000px;">
+        <div style="text-align: right; font-size: 12px;">홈 > 투자정보 > 주가정보</div>
+        <div class="col-xs" style="font-size: 25px">주가정보</div>
+        <div class="col-xs" style="border-bottom: 1px solid lightgray"><br>
+<pre class="font-serif-500" style="font-size: 26px">
+프로텍은 고객과 투자자의 이익을 극대화하는 고객중심의 경영을 추구합니다.
+</pre>
+        </div>
+        <div style="height: 50px"></div>
+        <div class="font-sans-300" style="margin-left: 40px">
+            <h5>투자에 참고하실 수 있도록 프로텍의 주가정보를 제공해 드립니다.</h5>
+        </div>
+        <div class="font-sans-300" style="margin-left: 40px">
+            IR담당자 email : ksg0328@protec21.co.kr / tel : 031-470-0720
+        </div>
+        <div style="height: 40px; margin-left: 40px"></div>
+
+
+
+        <div style="margin-left: 40px"><h6>프로텍 053610</h6></div>
+        <div style="margin-left: 40px">
+            <table class="table table-borderless" style="border-top: black solid 2px">
+                <tbody style="background-color: whitesmoke">
+                    <tr>
+                        <td class="font-sans-500" rowspan="2" style="text-align: center; vertical-align: middle; font-size: 40px; width: 150px">{{ stock.현재가 }}</td>
+                        <td class="font-sans-500" style="width: 60px">전일대비</td>
+                        <td style="width: 150px">{{ stock.전일대비 }}</td>
+                        <td class="font-sans-500">시가</td>
+                        <td class="font-sans-500">고가</td>
+                        <td class="font-sans-500">저가</td>
+                        <td class="font-sans-500">거래량</td>
+                    </tr>
+                    <tr style="border-top: lightgray solid 1px">
+                        <!--<td></td>-->
+                        <td class="font-sans-500">등락률</td>
+                        <td>{{ stock.등락률 }}</td>
+                        <td>{{ stock.시가 }}</td>
+                        <td>{{ stock.고가52 }}</td>
+                        <td>{{ stock.저가52 }}</td>
+                        <td>{{ stock.거래량 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-left: 40px">
+                <table class="table table-borderless" style="border-top: black solid 1px">
+                <tbody style="background-color: whitesmoke">
+                    <tr>
+                        <td colspan="3" class="font-sans-500">KOSDAQ / 반도체장비</td><td></td><td class="font-sans-500" style="border-bottom: lightgray solid 1px">매도상위</td><td class="font-sans-500" style="border-bottom: lightgray solid 1px">거래량</td><td class="font-sans-500" style="border-bottom: lightgray solid 1px">매수상위</td><td class="font-sans-500" style="border-bottom: lightgray solid 1px">거래량</td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">전일가</td><td>{{ stock.전일가 }}</td><td class="font-sans-500">52주최고</td><td>{{ stock.최고 }}</td>
+                        <td>{{ frgn.매도1 }}</td><td>{{ frgn.매도1거래량 }}</td><td>{{ frgn.매수1 }}</td><td>{{ frgn.매수1거래량 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">상한가</td><td>{{ stock.상한가 }}</td><td class="font-sans-500">52주최저</td><td>{{ stock.최저 }}</td>
+                        <td>{{ frgn.매도2 }}</td><td>{{ frgn.매도2거래량 }}</td><td>{{ frgn.매수2 }}</td><td>{{ frgn.매수2거래량 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">하한가</td><td>{{ stock.하한가 }}</td><td class="font-sans-500">PER</td><td>{{ stock.PER }}</td>
+                        <td>{{ frgn.매도3 }}</td><td>{{ frgn.매도3거래량 }}</td><td>{{ frgn.매수3 }}</td><td>{{ frgn.매수3거래량 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">액면가</td><td>{{ stock.액면가 }}</td><td></td><td></td>
+                        <td>{{ frgn.매도4 }}</td><td>{{ frgn.매도4거래량 }}</td><td>{{ frgn.매수4 }}</td><td>{{ frgn.매수4거래량 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">상장주식수</td><td></td><td></td><td>{{ stock.상장주식수 }}</td>
+                        <td>{{ frgn.매도5 }}</td><td>{{ frgn.매도5거래량 }}</td><td>{{ frgn.매수5 }}</td><td>{{ frgn.매수5거래량 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">시가총액</td><td></td><td></td><td>{{ stock.시가총액 }}</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td class="font-sans-500">상장일</td><td></td><td></td><td>2001.08</td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="font-sans-300" style="margin-left: 40px; text-align: right">정보제공 : KRX 정보데이터시스템</div>
+
+        <div style="height: 40px; margin-left: 40px"></div>
+
+
+        <div style="margin-left: 40px"><h6>기간별 거래 현황</h6></div>
+        <div style="margin-left: 40px">
+
+
+
+
+
+            <table class="table table-borderless">
+                <thead style="background-color: whitesmoke; color: black; border-top: black solid 2PX; border-bottom: black solid 1px">
+                    <tr class="font-sans-500">
+                            <td>날짜</td>
+                            <!--<td>v.day_dungrak</td>-->
+                            <td>종가</td>
+                            <!--<td>v.day_getamount</td>-->
+                            <td>전일비</td>
+                            <td>고가</td>
+                            <td>저가</td>
+                            <td>시가</td>
+                            <td>거래량</td>
+                    </tr>
+                </thead>
+                <tbody style="background-color: whitesmoke">
+                    {% for k, v in dailystocks.items %}
+                    <tr style="border-bottom: gainsboro solid 1px">
+                            <td>{{ v.day_date }}</td>
+                            <!--<td>{{ v.day_dungrak }}</td>-->
+                            <td>{{ v.day_endprice }}</td>
+                            <!--<td>{{ v.day_getamount }}</td>-->
+                            <td>{{ v.day_getdebi }}</td>
+                            <td>{{ v.day_high }}</td>
+                            <td>{{ v.day_low }}</td>
+                            <td>{{ v.day_start }}</td>
+                            <td>{{ v.day_volume }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="font-sans-300" style="margin-left: 40px; text-align: right">정보제공 : KRX 정보데이터시스템</div>
+        <div style="height: 100px"></div>
+    </div>
+</div>
+{% include "www/share/footer.html" %}
+</div>
+{% include "www/share/script.html" %}
+</body>
+</html>

@@ -13,27 +13,27 @@
     <div class="col-xs p-4" style="width: 250px; border-right: 1px solid lightgray">
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'company_intro' %}">Company</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'company_intro' %}">회사소개</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'product_dispenser' %}">Product</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black" href="{% url 'product_dispenser' %}">제품정보</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a onclick="alert('준비중입니다.')" class="font-sans-500" style="font-size: 26px; color: black" href="#" >Customer</a>
+                <a onclick="alert('준비중입니다.')" class="font-sans-500" style="font-size: 26px; color: black" href="#" >고객지원</a>
             </ul>
         </div>
         <div>
             <ul>
-                <a class="font-sans-500" style="font-size: 26px; color: black">Finance</a>
+                <a class="font-sans-500" style="font-size: 26px; color: black">투자정보</a>
                 <div class="font-sans-300" style="font-size: 20px">
-                    <li><a style="color: dimgray" href="{% url 'finance_notice' %}">- 회사공고</a></li>
-                    <li><a style="color: dimgray" href="{% url 'finance_disclosure' %}">- 공시정보</a></li>
-                    <li><a style="color: dimgray" href="#">- 주가정보</a></li>
-                    <li><a style="color: dimgray" href="#">- 재무정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_disclosure' %}">- 공시정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_stock' %}">- 주가정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_finance' %}">- 재무정보</a></li>
+                    <li><a style="color: dimgray" href="{% url 'investment_notice' %}">- 회사공고</a></li>
                 </div>
             </ul>
         </div>
