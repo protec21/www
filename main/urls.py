@@ -9,7 +9,7 @@ from main import settings
 urlpatterns = [
     path('admin/',                  admin.site.urls,                name='admin'),
     path('',                        views.index,                    name='index'),
-    path('company/intro/',          views.company_intro,            name='company_intro'),
+    path('company/about/',          views.company_about,            name='company_about'),
     path('company/vision/',         views.company_vision,           name='company_vision'),
     path('company/history/',        views.company_history,          name='company_history'),
     path('company/orgnation/',      views.company_orgnation,        name='company_orgnation'),

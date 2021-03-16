@@ -27,8 +27,8 @@ def index(request):
     #print(_kosdaq)
     stock = {'nowVal': _nowVal, 'kosdaq': _kosdaq, 'kospi': _kospi}
     return render(request, 'www/index.html', {'stock': stock})
-def company_intro(request):
-    return render(request, 'www/company_intro.html', {'message': 'company'})
+def company_about(request):
+    return render(request, 'www/company_about.html', {'message': 'company'})
 def company_vision(request):
     return render(request, 'www/company_vision.html', {'message': 'vision'})
 def company_history(request):
@@ -56,10 +56,6 @@ def investment_disclosure(request):
     response = requests.get(url)
     response.raise_for_status()
     return render(request, 'www/investment_disclosure.html', {'message': response.json()['list']})
-
-
-
-
 def investment_stock(request):
     url = 'https://finance.naver.com/item/sise.nhn?code=053610'
     response = requests.get(url)
@@ -151,7 +147,6 @@ def investment_stock(request):
     }
 
     return render(request, 'www/investment_stock.html', {'stock': stock, 'frgn': frgn, 'dailystocks': dailystocks})
-
 def investment_finance(request):
     return render(request, 'www/investment_finance.html', {'finance': 'finance'})
 def investment_notice(request):
