@@ -1,3 +1,7 @@
+body {
+    background-color: ghostwhite;
+}
+
 div {
     border:     0px solid blue;
     margin:     0px;
