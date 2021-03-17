@@ -55,10 +55,10 @@
         <div style="margin-left: 40px">
 
             <table class="table table-borderless">
-                <thead style="background-color: whitesmoke; color: black; border-top: black solid 2PX; border-bottom: black solid 1px">
+                <thead style="background-color: white; color: black; border-top: black solid 2PX; border-bottom: black solid 1px">
                     <tr class="font-sans-500"><td>제목</td><td>공지일자</td></tr>
                 </thead>
-                <tbody style="background-color: whitesmoke">
+                <tbody style="background-color: white">
                     {% for notice in notices %}
                     <tr style="border-bottom: gainsboro solid 1px"><td><a data-toggle="modal" href="#notice{{ notice.id }}" style="color: #212121">{{ notice.title }}</a></td><td>{{ notice.date|date:"Y-m-d" }}</td></tr>
                     {% endfor %}
