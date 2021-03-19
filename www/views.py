@@ -80,11 +80,6 @@ def investment_stock(request):
     _액면가    =   soup.select_one('.type_tax > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2) > span:nth-child(1)').text
     _상장주식수  =   soup.select_one('.type_tax > tbody:nth-child(2) > tr:nth-child(12) > td:nth-child(4) > span:nth-child(1) > span:nth-child(1)').text
     _시가총액   =   soup.select_one('.type_tax > tbody:nth-child(2) > tr:nth-child(12) > td:nth-child(2) > span:nth-child(1)').text
-
-
-
-
-
     url = 'http://asp1.krx.co.kr/servlet/krx.asp.XMLSise?code=053610'
     response = requests.get(url)
     html = response.text
@@ -103,7 +98,6 @@ def investment_stock(request):
         day['day_volume'] = dailystock['day_volume']
         dailystocks[dailystock['day_date']] = day
     print(dailystocks)
-
     url = 'https://finance.naver.com/item/main.nhn?code=053610'
     response = requests.get(url)
     response.raise_for_status()
@@ -114,38 +108,31 @@ def investment_stock(request):
     매도3 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(4) > td:nth-child(1)').text
     매도4 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(5) > td:nth-child(1)').text
     매도5 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(6) > td:nth-child(1)').text
-
     매수1 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(2) > td:nth-child(3)').text
     매수2 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(3) > td:nth-child(3)').text
     매수3 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(4) > td:nth-child(3)').text
     매수4 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(5) > td:nth-child(3)').text
     매수5 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(6) > td:nth-child(3)').text
-
     매도1거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(2) > td:nth-child(2) > em:nth-child(1)').text
     매도2거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(3) > td:nth-child(2) > em:nth-child(1)').text
     매도3거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(4) > td:nth-child(2) > em:nth-child(1)').text
     매도4거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(5) > td:nth-child(2) > em:nth-child(1)').text
     매도5거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(6) > td:nth-child(2) > em:nth-child(1)').text
-
     매수1거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(2) > td:nth-child(4) > em:nth-child(1)').text
     매수2거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(3) > td:nth-child(4) > em:nth-child(1)').text
     매수3거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(4) > td:nth-child(4) > em:nth-child(1)').text
     매수4거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(5) > td:nth-child(4) > em:nth-child(1)').text
     매수5거래량 = soup.select_one('div.section:nth-child(9) > div:nth-child(2) > table:nth-child(2) > tbody:nth-child(5) > tr:nth-child(6) > td:nth-child(4) > em:nth-child(1)').text
-
-
     stock = {
         '현재가': _현재가, '전일대비': _전일대비, '등락률': _등락률, '시가': _시가, '고가52': _고가52, '저가52': _저가52, '거래량': _거래량,
         '전일가': _전일가, "최고": _최고, "최저": _최저, '상한가': _상한가, '하한가': _하한가, 'PER': _PER, '액면가': _액면가, '상장주식수': _상장주식수, '시가총액': _시가총액,
     }
-
     frgn = {
         '매도1': 매도1, '매도2': 매도2, '매도3': 매도3, '매도4': 매도4, '매도5': 매도5,
         '매수1': 매수1, '매수2': 매수2, '매수3': 매수3, '매수4': 매수4, '매수5': 매수5,
         '매도1거래량': 매도1거래량, '매도2거래량': 매도2거래량, '매도3거래량': 매도3거래량, '매도4거래량': 매도4거래량, '매도5거래량': 매도5거래량,
         '매수1거래량': 매수1거래량, '매수2거래량': 매수2거래량, '매수3거래량': 매수3거래량, '매수4거래량': 매수4거래량, '매수5거래량': 매수5거래량
     }
-
     return render(request, 'www/investment_stock.html', {'stock': stock, 'frgn': frgn, 'dailystocks': dailystocks})
 def investment_finance(request):
     return render(request, 'www/investment_finance.html', {'finance': 'finance'})

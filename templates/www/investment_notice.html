@@ -88,10 +88,28 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                {% if notice.file %}
-                    <div style="border-bottom: solid 1px lightgray; padding-bottom: 10px">첨부 : <a href="{{ notice.file.url }}">{{ notice.file }}</a></div>
-                {% endif %}
-                <div>{{ notice.content|linebreaksbr }}</div>
+
+<!--                <div class="rounded" style="background-color: whitesmoke; padding: 10px; font-size: 14px">-->
+
+<table class="table table-bordered" style="font-size: 12px; background-color: whitesmoke">
+    <tr>
+        <th>
+            <span style="color: dimgray; margin-right: 5px"><i class="fas fa-paperclip"></i></span>첨부파일
+        </th>
+    </tr>
+    {% for noticeFile in notice.noticeattach_set.all%}
+    <tr>
+        <td>
+            <a href="{{ noticeFile.file.url }}">{{ noticeFile.file }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<!--                </div>-->
+
+                <div style="padding: 10px">
+                    {{ notice.content|linebreaksbr }}
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
