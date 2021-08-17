@@ -56,6 +56,10 @@ def investment_disclosure(request):
     response = requests.get(url)
     response.raise_for_status()
     return render(request, 'www/investment_disclosure.html', {'message': response.json()['list']})
+
+
+
+"""
 def investment_stock(request):
     url = 'https://finance.naver.com/item/sise.nhn?code=053610'
     response = requests.get(url)
@@ -87,17 +91,17 @@ def investment_stock(request):
     dailystocks = {}
     for dailystock in soup.findAll('dailystock'):
         day = {}
-        day['day_date'] = dailystock['day_date']
-        day['day_dungrak'] = dailystock['day_dungrak']
-        day['day_endprice'] = dailystock['day_endprice']
-        day['day_getamount'] = dailystock['day_getamount']
-        day['day_getdebi'] = dailystock['day_getdebi']
-        day['day_high'] = dailystock['day_high']
-        day['day_low'] = dailystock['day_low']
-        day['day_start'] = dailystock['day_start']
-        day['day_volume'] = dailystock['day_volume']
+        day['day_date'] = 'day_date'
+        day['day_dungrak'] = 'day_dungrak'
+        day['day_endprice'] = 'day_endprice'
+        day['day_getamount'] = 'day_getamount'
+        day['day_getdebi'] = 'day_getdebi'
+        day['day_high'] = 'day_high'
+        day['day_low'] = 'day_low'
+        day['day_start'] = 'day_start'
+        day['day_volume'] = 'day_volume'
         dailystocks[dailystock['day_date']] = day
-    print(dailystocks)
+
     url = 'https://finance.naver.com/item/main.nhn?code=053610'
     response = requests.get(url)
     response.raise_for_status()
@@ -134,6 +138,13 @@ def investment_stock(request):
         '매수1거래량': 매수1거래량, '매수2거래량': 매수2거래량, '매수3거래량': 매수3거래량, '매수4거래량': 매수4거래량, '매수5거래량': 매수5거래량
     }
     return render(request, 'www/investment_stock.html', {'stock': stock, 'frgn': frgn, 'dailystocks': dailystocks})
+"""
+
+
+
+
+def investment_stock(request):
+    return render(request, 'www/investment_stock.html', {'stock': 'stock', 'frgn': 'frgn', 'dailystocks': 'dailystocks'})
 def investment_finance(request):
     return render(request, 'www/investment_finance.html', {'finance': 'finance'})
 def investment_notice(request):

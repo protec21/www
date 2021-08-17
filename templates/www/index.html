@@ -3,13 +3,13 @@
 <head>
 {% include "www/share/head.html" %}
 <script>
-    $( function() {
-        $( "#popup1" ).draggable();
-    } );
+//    $( function() {
+//        $( "#popup1" ).draggable();
+//    } );
 function show_popup(){
-    //layer_popup(popup1, 100, 400, 470)
-    //layer_popup(popup2, 100, 750, 400)
-    //layer_popup(popup3, 100, 1200, 400)
+//    layer_popup(popup1, 100, 400, 470)
+    layer_popup(popup2, 100, 350, 352)
+//    layer_popup(popup3, 100, 1200, 400)
 }
 function layer_popup(el, top, left, width){
     var $el = $(el)
@@ -126,14 +126,12 @@ FAX : 032-822-9184<br>
         </div>
     </div>
 </div>
-<div id="popup2" class="ui-widget-shadow rounded" style="display: none; position: absolute; height: auto; z-index: 10; background-color: whitesmoke; opacity: 0.9">
+<div id="popup2" class="ui-widget-shadow rounded" style="display: none; position: absolute; height: auto; z-index: 10; background-color: whitesmoke; opacity: 1">
     <div class="pop-container">
         <div class="pop-conts">
-            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px">제목</div>
-            <div style="border-bottom: solid 1px lightgray">
-            <p>
-                팝업<br>
-            </p>
+            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px; cursor: move">어린이 교통안전 릴레이 챌린지</div>
+            <div style="border-top: solid 1px lightgray; border-bottom: solid 1px lightgray; text-align: center">
+                <img src="{% static 'www/img/공지_챌린지.jpg' %}">
             </div>
             <div style="padding: 5px; text-align: right">
                 <button type="button" class="btn btn-outline-dark btn-sm btn-layerClose" style="height: 23px; font-size: 11px">Close</button>
@@ -144,11 +142,9 @@ FAX : 032-822-9184<br>
 <div id="popup3" class="ui-widget-shadow rounded" style="display: none; position: absolute; height: auto; z-index: 10; background-color: whitesmoke; opacity: 0.9">
     <div class="pop-container">
         <div class="pop-conts">
-            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px">제목</div>
-            <div style="border-bottom: solid 1px lightgray">
-            <p>
-                팝업<br>
-            </p>
+            <div id="title" class="font-sans-500 rounded-top" style="background-color: #1F4E78; color: lightgray; padding: 3px; cursor: move">제목</div>
+            <div style="border-top: solid 1px lightgray; border-bottom: solid 1px lightgray; text-align: center">
+                <p>팝업<br></p>
             </div>
             <div style="padding: 5px; text-align: right">
                 <button type="button" class="btn btn-outline-dark btn-sm btn-layerClose" style="height: 23px; font-size: 11px">Close</button>
